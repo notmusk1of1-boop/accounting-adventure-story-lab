@@ -1,0 +1,59 @@
+{
+  "scene": {
+    "id": "archive-room-01",
+    "chapter": "第一章",
+    "title": "总论",
+    "subtitle": "会计档案室 · 初次值班",
+    "statusTitle": "档案室现在可以调查",
+    "statusText": "点击闪光标记或老会计，查看对应说明。",
+    "footerLeft": "已进入会计档案室",
+    "footerRight": "场景 01 / 25"
+  },
+  "characters": [
+    {
+      "id": "mentor",
+      "name": "周会计",
+      "role": "档案室管理员",
+      "dialogueId": "mentor-intro",
+      "position": { "left": "30%", "bottom": "23%" }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "left-shelf",
+      "label": "旧账簿",
+      "dialogueId": "shelf-note",
+      "position": { "left": "7%", "top": "32%", "width": "18%", "height": "35%" }
+    },
+    {
+      "id": "notice-board",
+      "label": "值班告示",
+      "dialogueId": "notice-note",
+      "position": { "left": "51%", "top": "45%", "width": "17%", "height": "22%" }
+    },
+    {
+      "id": "ledger-desk",
+      "label": "资料台账",
+      "dialogueId": "desk-note",
+      "position": { "left": "75%", "top": "53%", "width": "18%", "height": "20%" }
+    }
+  ],
+  "dialogues": {
+    "mentor-intro": [
+      { "speaker": "周会计", "text": "新来的？别紧张。这里的每一排档案，都对应一段会计工作的来龙去脉。" },
+      { "speaker": "你", "text": "我应该先做什么？" },
+      { "speaker": "周会计", "text": "先四处看看。会发光的地方都能调查，今天只需要熟悉档案室。" }
+    ],
+    "shelf-note": [
+      { "speaker": "旁白", "text": "书架上整齐放着旧账簿，标签按年份和业务类型分类。" },
+      { "speaker": "周会计", "text": "可靠的记录要能让后来的人看懂，也要经得起核对。" }
+    ],
+    "notice-note": [
+      { "speaker": "值班告示", "text": "今日任务：认识管理员，查看旧账簿和资料台账。" }
+    ],
+    "desk-note": [
+      { "speaker": "旁白", "text": "台账记录了资料的名称、编号、存放位置和借阅状态。" },
+      { "speaker": "你", "text": "原来找一份资料之前，要先从台账确认位置。" }
+    ]
+  }
+}

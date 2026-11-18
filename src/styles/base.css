@@ -1,0 +1,79 @@
+:root {
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", system-ui, sans-serif;
+  color: #263c37;
+  background: #d8d3c6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --paper: #f6f1e5;
+  --paper-deep: #e9e0ce;
+  --ink: #263c37;
+  --muted: #7e877f;
+  --green: #4e7e6c;
+  --green-dark: #315c50;
+  --brown: #735b3e;
+  --brown-dark: #4d3c2a;
+  --line: #b9b19f;
+  --blue-glass: #b9d4d6;
+  --shadow: rgba(43, 41, 35, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #d8d3c6;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.52), transparent 28rem),
+    linear-gradient(135deg, #d2ccbf, #e8e4da 46%, #c9c2b4);
+}
+
+button { font: inherit; }
+button:not(:disabled) { cursor: pointer; }
+button:focus-visible { outline: 3px solid #1d5c82; outline-offset: 3px; }
+
+#app {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: clamp(0px, 2vw, 28px);
+}
+
+.game-shell {
+  position: relative;
+  width: min(100%, 576px);
+  min-height: min(100svh, 1024px);
+  overflow: hidden;
+  border: 1px solid rgba(82, 72, 55, 0.28);
+  background: var(--paper);
+  box-shadow: 0 24px 70px var(--shadow);
+}
+
+@media (min-width: 720px) {
+  .game-shell {
+    min-height: min(92svh, 920px);
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 1100px) and (max-height: 820px) {
+  .game-shell { width: min(100%, 980px); min-height: 720px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
